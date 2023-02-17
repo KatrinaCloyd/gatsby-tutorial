@@ -7,6 +7,11 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout pageTitle="I'm am abount.">
       <p>I'm making this by following the Gatsby Tutorial.</p>
       <p>about pages, man... I just can't help myself.</p>
+      <br />
+      {/* static folder assets available all over, but not optimized */}
+      <img src="/giffy.gif" />
+      <br />
+      <br />
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat beatae,
         consectetur nisi modi libero ipsam qui quos eum, reprehenderit in

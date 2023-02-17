@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 
@@ -92,7 +92,9 @@ const links = [
   },
 ];
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = ({ data }) => {
+  // with query exported below we now have access to the data
+  console.log("home page data: ", data);
   return (
     <Layout pageTitle="Home Again - Home Again">
       <h2 style={headingStyles}>
@@ -138,3 +140,17 @@ export const Head: HeadFC = () => (
     />
   </>
 );
+
+// example of a page query
+export const query = graphql`
+  query SiteInfo {
+    site {
+      host
+      siteMetadata {
+        siteUrl
+        description
+        title
+      }
+    }
+  }
+`;

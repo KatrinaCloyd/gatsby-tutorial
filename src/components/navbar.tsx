@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 const navStyles = {
   display: "flex",
@@ -12,6 +12,20 @@ const navStyles = {
 };
 
 const NavBar: React.FC = () => {
+  // example of a static query
+  // cannot use query variables here
+  // can only use this hook one time in each component
+  const data = useStaticQuery(graphql`
+    query SiteInfo {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+
+  console.log("nav data: ", data.site.siteMetadata.title);
   return (
     <nav>
       <ul style={navStyles}>
