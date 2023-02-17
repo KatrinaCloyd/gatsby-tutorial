@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, HeadFC, Link, PageProps } from "gatsby";
+import { graphql, HeadFC, Link } from "gatsby";
 import Layout from "../../components/layout";
 
 type PostData = {

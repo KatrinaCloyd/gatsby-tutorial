@@ -5,15 +5,18 @@ import Layout from "../components/layout";
 type PostData = {
   data: {
     markdownRemark: {
-      id: string;
       html: string;
       frontmatter: {
         title: string;
-        slug: string;
       };
     };
   };
 };
+
+// TEMPLATE PAGE FOR DYNAMIC POST PAGE
+// like [id].tsx syntax in next
+// does not have to be in templates folder
+// just need to link to correct path in gatsby-node file
 
 const DynamicPostPage: React.FC<PostData> = ({ data }) => {
   const { html } = data.markdownRemark;

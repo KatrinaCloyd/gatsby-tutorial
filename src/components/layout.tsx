@@ -18,21 +18,11 @@ const bodyStyles = {
   maxWidth: "800px",
   margin: "50px auto",
   flexGrow: 1,
-  "&p": {
-    border: "red solid 1px",
-  },
 };
 const headingStyles = {
   marginTop: 0,
   marginBottom: 30,
   maxWidth: "50%",
-};
-const navStyles = {
-  display: "flex",
-  justifyContent: "center",
-  gap: 30,
-  padding: 30,
-  listStyleType: "none",
 };
 
 const Layout: React.FC<props> = ({ pageTitle, children }) => {

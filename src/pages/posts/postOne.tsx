@@ -20,7 +20,7 @@ export default PostOne;
 
 export const Head: HeadFC = () => (
   <>
-    <title>About Page | Gatsby Tutorial</title>
+    <title>Post One Detail Page | Gatsby Tutorial</title>
     <meta name="description" content="About Page... blah blah blah" />
   </>
 );
