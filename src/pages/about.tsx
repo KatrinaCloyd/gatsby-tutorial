@@ -10,6 +10,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <br />
       {/* static folder assets available all over, but not optimized */}
       <img src="/giffy.gif" />
+      {/* Recommended to use gatsby-image and other dependencies to get
+        images via a query for better optimization and lazy loading*/}
       <br />
       <br />
       <p>

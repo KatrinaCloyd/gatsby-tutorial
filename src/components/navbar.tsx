@@ -15,17 +15,18 @@ const NavBar: React.FC = () => {
   // example of a static query
   // cannot use query variables here
   // can only use this hook one time in each component
-  const data = useStaticQuery(graphql`
-    query SiteInfo {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  // const data = useStaticQuery(graphql`
+  //   query SiteInfo {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `);
 
-  console.log("nav data: ", data.site.siteMetadata.title);
+  // console.log("nav data: ", data.site.siteMetadata.title);
+
   return (
     <nav>
       <ul style={navStyles}>

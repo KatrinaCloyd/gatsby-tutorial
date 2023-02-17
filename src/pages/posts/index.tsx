@@ -25,7 +25,7 @@ const linkStyle = {
   marginInlineEnd: 20,
 };
 
-const Posts: React.FC<PostData> = ({ data }) => {
+const Posts: React.FC<PostData> = ({ data }: PostData) => {
   const posts = data.allMarkdownRemark.nodes;
   console.log("post pg", posts[0].frontmatter.slug);
   return (

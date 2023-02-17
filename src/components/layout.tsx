@@ -18,6 +18,9 @@ const bodyStyles = {
   maxWidth: "800px",
   margin: "50px auto",
   flexGrow: 1,
+  "&p": {
+    border: "red solid 1px",
+  },
 };
 const headingStyles = {
   marginTop: 0,
