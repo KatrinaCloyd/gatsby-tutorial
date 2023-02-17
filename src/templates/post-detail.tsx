@@ -42,12 +42,11 @@ export const Head: HeadFC<PostData> = ({ data }) => (
 );
 
 export const query = graphql`
-  query PostDetails($slug: String) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query PostDetails($id: String) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
-        slug
       }
     }
   }

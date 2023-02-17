@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query PostList {
       allMarkdownRemark {
         nodes {
+          id
           frontmatter {
             slug
           }
@@ -17,7 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: "/" + node.frontmatter.slug,
       component: path.resolve("./src/templates/post-detail.tsx"),
-      context: { slug: node.frontmatter.slug },
+      context: { id: node.id },
     });
   });
 };
